@@ -32,30 +32,26 @@
 
 <h1>Selezionao</h1>
 
-<label for="materia">Materia:</label>
-<select id="materia">
-    <option value="">-- Seleziona una materia --</option>
+<label for="Materia">Materia:</label>
+<select id="Materia">
+    <option value="">-- Seleziona una Materia --</option>
     <option value="anatomia">Anatomia</option>
     <option value="metacognizione">Metacognizione</option>
     <option value="fisica">Fisica</option>
 </select>
 
-<label for="capitolo">Capitolo:</label>
-<select id="capitolo">
-    <option value="">-- Seleziona un sezione --</option>
+<label for="Capitolo">Capitolo:</label>
+<select id="Capitolo">
+    <option value="">-- Seleziona un Sezione --</option>
 </select>
 
-<label for="sezione">Sezione:</label>
-<select id="sezione">
-    <option value="">-- Seleziona un sottosezione --</option>
+<label for="Sezione">Sezione:</label>
+<select id="Sezione">
+    <option value="">-- Seleziona un sottoSezione --</option>
 </select>
+ 
 
-<label for="sottosezione">Sottosezione:</label>
-<select id="sottosezione">
-    <option value="">-- Seleziona una sottosezione --</option>
-</select>    
-
-<button id="aprisezione" disabled>Apri</button>
+<button id="apriSezione" disabled>Apri</button>
 
 <script>
 // Dati delle materie, argomenti e sottoargomenti
@@ -126,67 +122,67 @@ var dati = {
 
 
 // Riferimenti agli elementi select e al pulsante
-var selectMateria = document.getElementById('materia');
-var selectsezione = document.getElementById('capitolo');
-var selectSottosezione = document.getElementById('sezione');
-var buttonAprisezione = document.getElementById('aprisezione');
+var selectMateria = document.getElementById('Materia');
+var selectSezione = document.getElementById('Capitolo');
+var selectSottoSezione = document.getElementById('Sezione');
+var buttonApriSezione = document.getElementById('apriSezione');
 
-// Evento al cambio di materia
+// Evento al cambio di Materia
 selectMateria.onchange = function() {
     // Resetta gli altri menù e disabilita il pulsante
-    selectsezione.innerHTML = '<option value="">-- Seleziona un sezione --</option>';
-    selectSottosezione.innerHTML = '<option value="">-- Seleziona un sottosezione --</option>';
-    buttonAprisezione.disabled = true;
+    selectSezione.innerHTML = '<option value="">-- Seleziona un Sezione --</option>';
+    selectSottoSezione.innerHTML = '<option value="">-- Seleziona un sottoSezione --</option>';
+    buttonApriSezione.disabled = true;
 
-    var materiaSelezionata = this.value;
-    if (materiaSelezionata) {
-        var argomenti = Object.keys(dati[materiaSelezionata]);
-        argomenti.forEach(function(sezione) {
+    var MateriaSelezionata = this.value;
+    if (MateriaSelezionata) {
+        var argomenti = Object.keys(dati[MateriaSelezionata]);
+        argomenti.forEach(function(Sezione) {
             var option = document.createElement('option');
-            option.value = sezione;
-            option.text = sezione;
-            selectsezione.add(option);
+            option.value = Sezione;
+            option.text = Sezione;
+            selectSezione.add(option);
         });
     }
 };
 
-// Evento al cambio di sezione
-selectsezione.onchange = function() {
-    selectSottosezione.innerHTML = '<option value="">-- Seleziona un sottosezione --</option>';
-    buttonAprisezione.disabled = true;
+// Evento al cambio di Sezione
+selectSezione.onchange = function() {
+    selectSottoSezione.innerHTML = '<option value="">-- Seleziona un sottoSezione --</option>';
+    buttonApriSezione.disabled = true;
 
-    var materiaSelezionata = selectMateria.value;
-    var sezioneSelezionato = this.value;
-    if (sezioneSelezionato) {
-        var sottoargomenti = dati[materiaSelezionata][sezioneSelezionato];
-        sottoargomenti.forEach(function(sottosezione) {
+    var MateriaSelezionata = selectMateria.value;
+    var SezioneSelezionato = this.value;
+    if (SezioneSelezionato) {
+        var sottoargomenti = dati[MateriaSelezionata][SezioneSelezionato];
+        sottoargomenti.forEach(function(sottoSezione) {
             var option = document.createElement('option');
-            option.value = sottosezione;
-            option.text = sottosezione;
-            selectSottosezione.add(option);
+            option.value = sottoSezione;
+            option.text = sottoSezione;
+            selectSottoSezione.add(option);
         });
     }
 };
 
-// Evento al cambio di sottosezione
-selectSottosezione.onchange = function() {
+// Evento al cambio di sottoSezione
+selectSottoSezione.onchange = function() {
     if (this.value) {
-        buttonAprisezione.disabled = false;
+        buttonApriSezione.disabled = false;
     } else {
-        buttonAprisezione.disabled = true;
+        buttonApriSezione.disabled = true;
     }
 };
 
 // Evento al click del pulsante
-buttonAprisezione.onclick = function() {
-    var materiaSelezionata = selectMateria.value;
-    var sezioneSelezionato = selectsezione.value;
-    var sottosezioneSelezionato = selectSottosezione.value;
+buttonApriSezione.onclick = function() {
+    var MateriaSelezionata = selectMateria.value;
+    var SezioneSelezionato = selectSezione.value;
+    var sottoSezioneSelezionato = selectSottoSezione.value;
 
     // Costruisci l'URL della pagina
-    var url = encodeURIComponent(materiaSelezionata) + '/'
-            + encodeURIComponent(sezioneSelezionato) + '/'
-            + encodeURIComponent(sottosezioneSelezionato) + '.htm';
+    var url = encodeURIComponent(MateriaSelezionata) + '/'
+            + encodeURIComponent(SezioneSelezionato) + '/'
+            + encodeURIComponent(sottoSezioneSelezionato) + '.htm';
 
     // Naviga all'URL
     window.location.href = url;
