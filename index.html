@@ -1,137 +1,219 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-    <title>Selezione Materia</title>
     <meta charset="UTF-8">
+    <title>Selezione Materia</title>
+    <!-- Importa il font "Roboto" da Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <style>
+        /* Reset CSS */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Stili del corpo */
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f6f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
         }
-        select {
-            margin: 10px 0;
-            padding: 5px;
-            width: 250px;
+
+        /* Contenitore */
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+            width: 400px;
         }
+
+        /* Titolo */
+        h1 {
+            margin-bottom: 30px;
+            font-size: 24px;
+            text-align: center;
+            color: #333;
+        }
+
+        /* Etichette */
         label {
             display: block;
-            margin-top: 20px;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: #555;
         }
-        button {
-            margin-top: 20px;
-            padding: 10px 15px;
+
+        /* Selettori */
+        select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f9fafb;
             font-size: 16px;
+            color: #333;
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 24px;
+            cursor: pointer;
         }
+
+        select:disabled {
+            background-color: #e9ecef;
+            cursor: not-allowed;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+        }
+
+        /* Pulsante */
+        button {
+            width: 100%;
+            padding: 14px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
         button:disabled {
             background-color: #ccc;
             cursor: not-allowed;
+        }
+
+        button:not(:disabled):hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
 
-<h1>Seleziona la Materia e l'Argomento</h1>
+<div class="container">
+    <h1>Seleziona la Materia e l'Argomento</h1>
 
-<label for="materia">Materia:</label>
-<select id="materia">
-    <option value="">-- Seleziona una materia --</option>
-    <option value="Anatomia">Anatomia</option>
-    <option value="Metacognizione">Metacognizione</option>
-    <option value="Fisica">Fisica</option>
-</select>
+    <label for="materia">Materia:</label>
+    <select id="materia">
+        <option value="">-- Seleziona una materia --</option>
+        <option value="Anatomia">Anatomia</option>
+        <option value="Metacognizione">Metacognizione</option>
+        <option value="Fisica">Fisica</option>
+    </select>
 
-<label for="argomento">Argomento:</label>
-<select id="argomento">
-    <option value="">-- Seleziona un argomento --</option>
-</select>
+    <label for="argomento">Argomento:</label>
+    <select id="argomento" disabled>
+        <option value="">-- Seleziona un argomento --</option>
+    </select>
 
-<label for="sottoargomento">Sottoargomento:</label>
-<select id="sottoargomento">
-    <option value="">-- Seleziona un sottoargomento --</option>
-</select>
+    <label for="sottoargomento">Sottoargomento:</label>
+    <select id="sottoargomento" disabled>
+        <option value="">-- Seleziona un sottoargomento --</option>
+    </select>
 
-<button id="apriArgomento" disabled>Apri Argomento</button>
+    <button id="apriArgomento" disabled>Apri Argomento</button>
+</div>
 
 <script>
-// Dati delle materie, argomenti e sottoargomenti
-var dati = {
-    'Anatomia': {
-        'Scheletrico': ['carotide_esterna', 'carotide_interna', 'generalità_vene'],
-        'Muscolare': ['Intrinseci_torace', 'Intrinseci_Dorso'], 
-        'Cardiovascolare': ['Ossa', 'Muscoli'], 
-        'Digerente': ['Ossa', 'Muscoli'], 
-        'Respiratorio': ['configurazione_interna', 'microscopica_naso', 'naso_esterno', 'vie_aeree_superiori', 'zona_glottica', 'zona_sopraglottica'], 
-        'Urinario': ['Ossa', 'Muscoli'], 
-        'Genitale': ['Ossa', 'Muscoli'], 
-    },
-    'Metacognizione': {
-        'A_mind_for_numbers': ['Chunking_steps'],
-        'Il_metodo_geniale': ['Ingegneria_studio']
-    },
-    'Fisica': {
-        'Meccanica': ['Cinematica', 'Dinamica'],
-        'Elettromagnetismo': ['Elettricità', 'Magnetismo']
-    }
-};
-// Riferimenti agli elementi select e al pulsante
-var selectMateria = document.getElementById('materia');
-var selectArgomento = document.getElementById('argomento');
-var selectSottoargomento = document.getElementById('sottoargomento');
-var buttonApriArgomento = document.getElementById('apriArgomento');
-// Evento al cambio di materia
-selectMateria.onchange = function() {
-    // Resetta gli altri menù e disabilita il pulsante
-    selectArgomento.innerHTML = '<option value="">-- Seleziona un argomento --</option>';
-    selectSottoargomento.innerHTML = '<option value="">-- Seleziona un sottoargomento --</option>';
-    buttonApriArgomento.disabled = true;
-    var materiaSelezionata = this.value;
-    if (materiaSelezionata) {
-        var argomenti = Object.keys(dati[materiaSelezionata]);
-        argomenti.forEach(function(argomento) {
-            var option = document.createElement('option');
-            option.value = argomento;
-            option.text = argomento;
-            selectArgomento.add(option);
-        });
-    }
-};
-// Evento al cambio di argomento
-selectArgomento.onchange = function() {
-    selectSottoargomento.innerHTML = '<option value="">-- Seleziona un sottoargomento --</option>';
-    buttonApriArgomento.disabled = true;
-    var materiaSelezionata = selectMateria.value;
-    var argomentoSelezionato = this.value;
-    if (argomentoSelezionato) {
-        var sottoargomenti = dati[materiaSelezionata][argomentoSelezionato];
-        sottoargomenti.forEach(function(sottoargomento) {
-            var option = document.createElement('option');
-            option.value = sottoargomento;
-            option.text = sottoargomento;
-            selectSottoargomento.add(option);
-        });
-    }
-};
-
-// Evento al cambio di sottoargomento
-selectSottoargomento.onchange = function() {
-    if (this.value) {
-        buttonApriArgomento.disabled = false;
-    } else {
+    // Dati delle materie, argomenti e sottoargomenti
+    var dati = {
+        'Anatomia': {
+            'Scheletrico': ['carotide_esterna', 'carotide_interna', 'generalità_vene'],
+            'Muscolare': ['Intrinseci_torace', 'Intrinseci_Dorso'], 
+            'Cardiovascolare': ['Ossa', 'Muscoli'], 
+            'Digerente': ['Ossa', 'Muscoli'], 
+            'Respiratorio': ['configurazione_interna', 'microscopica_naso', 'naso_esterno', 'vie_aeree_superiori', 'zona_glottica', 'zona_sopraglottica'], 
+            'Urinario': ['Ossa', 'Muscoli'], 
+            'Genitale': ['Ossa', 'Muscoli'], 
+        },
+        'Metacognizione': {
+            'A_mind_for_numbers': ['Chunking_steps'],
+            'Il_metodo_geniale': ['Ingegneria_studio']
+        },
+        'Fisica': {
+            'Meccanica': ['Cinematica', 'Dinamica'],
+            'Elettromagnetismo': ['Elettricità', 'Magnetismo']
+        }
+    };
+    // Riferimenti agli elementi select e al pulsante
+    var selectMateria = document.getElementById('materia');
+    var selectArgomento = document.getElementById('argomento');
+    var selectSottoargomento = document.getElementById('sottoargomento');
+    var buttonApriArgomento = document.getElementById('apriArgomento');
+    // Evento al cambio di materia
+    selectMateria.onchange = function() {
+        // Resetta gli altri menù e disabilita il pulsante
+        selectArgomento.innerHTML = '<option value="">-- Seleziona un argomento --</option>';
+        selectSottoargomento.innerHTML = '<option value="">-- Seleziona un sottoargomento --</option>';
+        selectArgomento.disabled = true;
+        selectSottoargomento.disabled = true;
         buttonApriArgomento.disabled = true;
-    }
-};
-// Evento al click del pulsante
-buttonApriArgomento.onclick = function() {
-    var materiaSelezionata = selectMateria.value;
-    var argomentoSelezionato = selectArgomento.value;
-    var sottoargomentoSelezionato = selectSottoargomento.value;
-    // Costruisci l'URL della pagina
-    var url = encodeURIComponent(materiaSelezionata) + '/'
-            + encodeURIComponent(argomentoSelezionato) + '/'
-            + encodeURIComponent(sottoargomentoSelezionato) + '.htm';
-    // Naviga all'URL
-    window.location.href = url;
-};
+        var materiaSelezionata = this.value;
+        if (materiaSelezionata) {
+            var argomenti = Object.keys(dati[materiaSelezionata]);
+            argomenti.forEach(function(argomento) {
+                var option = document.createElement('option');
+                option.value = argomento;
+                option.text = argomento.replace(/_/g, ' ');
+                selectArgomento.add(option);
+            });
+            selectArgomento.disabled = false;
+        }
+    };
+    // Evento al cambio di argomento
+    selectArgomento.onchange = function() {
+        selectSottoargomento.innerHTML = '<option value="">-- Seleziona un sottoargomento --</option>';
+        selectSottoargomento.disabled = true;
+        buttonApriArgomento.disabled = true;
+        var materiaSelezionata = selectMateria.value;
+        var argomentoSelezionato = this.value;
+        if (argomentoSelezionato) {
+            var sottoargomenti = dati[materiaSelezionata][argomentoSelezionato];
+            sottoargomenti.forEach(function(sottoargomento) {
+                var option = document.createElement('option');
+                option.value = sottoargomento;
+                option.text = sottoargomento.replace(/_/g, ' ');
+                selectSottoargomento.add(option);
+            });
+            selectSottoargomento.disabled = false;
+        }
+    };
+
+    // Evento al cambio di sottoargomento
+    selectSottoargomento.onchange = function() {
+        if (this.value) {
+            buttonApriArgomento.disabled = false;
+        } else {
+            buttonApriArgomento.disabled = true;
+        }
+    };
+    // Evento al click del pulsante
+    buttonApriArgomento.onclick = function() {
+        var materiaSelezionata = selectMateria.value;
+        var argomentoSelezionato = selectArgomento.value;
+        var sottoargomentoSelezionato = selectSottoargomento.value;
+        // Costruisci l'URL della pagina
+        var url = encodeURIComponent(materiaSelezionata) + '/'
+                + encodeURIComponent(argomentoSelezionato) + '/'
+                + encodeURIComponent(sottoargomentoSelezionato) + '.htm';
+        // Naviga all'URL
+        window.location.href = url;
+    };
 </script>
 
 </body>
+</html>
