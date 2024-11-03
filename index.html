@@ -69,6 +69,7 @@ var dati = {
             'Arto inferiore': ['Anatomia del Cuore', 'Fisiologia del Cuore', '']
         },
         'Muscolare': {
+            'Intrinseci del torace'
         }
         'Cardiovascolare': {
             'Cuore': ['Anatomia del Cuore', 'Fisiologia del Cuore', ''],
@@ -185,7 +186,7 @@ buttonApriArgomento.onclick = function() {
     // Costruisci l'URL della pagina
     var url = encodeURIComponent(materiaSelezionata) + '/'
             + encodeURIComponent(argomentoSelezionato) + '/'
-            + encodeURIComponent(sottoargomentoSelezionato) + '.html';
+            + encodeURIComponent(sottoargomentoSelezionato) + '.htm';
 
     // Naviga all'URL
     window.location.href = url;
