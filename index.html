@@ -36,8 +36,8 @@
 <select id="materia">
     <option value="">-- Seleziona una materia --</option>
     <option value="Anatomia">Anatomia</option>
-    <option value="metacognizione">Metacognizione</option>
-    <option value="fisica">Fisica</option>
+    <option value="Metacognizione">Metacognizione</option>
+    <option value="Fisica">Fisica</option>
 </select>
 
 <label for="argomento">Argomento:</label>
@@ -56,7 +56,7 @@
 // Dati delle materie, argomenti e sottoargomenti
 var dati = {
     'Anatomia': {
-        'Scheletrico': ['Cuore', 'Vasi Sanguigni'],
+        'Scheletrico': ['carotide_esterna', 'carotide_interna', 'generalità_vene'],
         'Muscolare': ['Intrinseci_torace', 'Intrinseci_Dorso'], 
         'Cardiovascolare': ['Ossa', 'Muscoli'], 
         'Digerente': ['Ossa', 'Muscoli'], 
@@ -64,11 +64,11 @@ var dati = {
         'Urinario': ['Ossa', 'Muscoli'], 
         'Genitale': ['Ossa', 'Muscoli'], 
     },
-    'metacognizione': {
-        'Strategie di Apprendimento': ['Mappe Concettuali', 'Lettura Critica'],
-        'Consapevolezza': ['Autovalutazione', 'Pianificazione']
+    'Metacognizione': {
+        'A_mind_for_numbers': ['Chunking_steps'],
+        'Il_metodo_geniale': ['Ingegneria_studio.htm']
     },
-    'fisica': {
+    'Fisica': {
         'Meccanica': ['Cinematica', 'Dinamica'],
         'Elettromagnetismo': ['Elettricità', 'Magnetismo']
     }
