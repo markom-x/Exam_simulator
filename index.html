@@ -30,159 +30,107 @@
 </head>
 <body>
 
-<h1>Selezionao</h1>
+<h1>Seleziona la Materia e l'Argomento</h1>
 
-<label for="Materia">Materia:</label>
-<select id="Materia">
-    <option value="">-- Seleziona una Materia --</option>
+<label for="materia">Materia:</label>
+<select id="materia">
+    <option value="">-- Seleziona una materia --</option>
     <option value="anatomia">Anatomia</option>
     <option value="metacognizione">Metacognizione</option>
     <option value="fisica">Fisica</option>
 </select>
 
-<label for="Capitolo">Capitolo:</label>
-<select id="Capitolo">
-    <option value="">-- Seleziona un Sezione --</option>
+<label for="argomento">Argomento:</label>
+<select id="argomento">
+    <option value="">-- Seleziona un argomento --</option>
 </select>
 
-<label for="Sezione">Sezione:</label>
-<select id="Sezione">
-    <option value="">-- Seleziona un sottoSezione --</option>
+<label for="sottoargomento">Sottoargomento:</label>
+<select id="sottoargomento">
+    <option value="">-- Seleziona un sottoargomento --</option>
 </select>
- 
 
-<button id="apriSezione" disabled>Apri</button>
+<button id="apriArgomento" disabled>Apri Argomento</button>
 
 <script>
 // Dati delle materie, argomenti e sottoargomenti
 var dati = {
     'anatomia': {
-        'Scheletrico': {
-            'Testa': ['Anatomia del Cuore', 'Fisiologia del Cuore', ''],
-            'Collo': ['Anatomia del Cuore', 'Fisiologia del Cuore', ''],
-            'Tronco': ['Anatomia del Cuore', 'Fisiologia del Cuore', ''],
-            'Arto superiore': ['Anatomia del Cuore', 'Fisiologia del Cuore', ''],
-            'Arto inferiore': ['Anatomia del Cuore', 'Fisiologia del Cuore', '']
-        },
-        'Muscolare': {
-            'Intrinseci del torace'
-        }
-        'Cardiovascolare': {
-            'Cuore': ['Anatomia del Cuore', 'Fisiologia del Cuore', ''],
-            'Arterie': ['Anatomia del Cuore', 'Fisiologia del Cuore', ''],
-            'Vene': ['Anatomia del Cuore', 'Fisiologia del Cuore', '']
-        }
-        'Digerente': {
-            'Ossa': ['Ossa Lunghe', 'Ossa Corte'],
-            'Muscoli': ['Muscoli Scheletrici', 'Muscoli Lisci']
-        }
-        'Respiratorio': {
-            'Ossa': ['Ossa Lunghe', 'Ossa Corte'],
-            'Muscoli': ['Muscoli Scheletrici', 'Muscoli Lisci']
-        }
-        'Urinario': {
-            'Ossa': ['Ossa Lunghe', 'Ossa Corte'],
-            'Muscoli': ['Muscoli Scheletrici', 'Muscoli Lisci']
-        }
-        'Genitale Maschile': {
-            'Ossa': ['Ossa Lunghe', 'Ossa Corte'],
-            'Muscoli': ['Muscoli Scheletrici', 'Muscoli Lisci']
-        }
-        'Genitale Femminile': {
-            'Ossa': ['Ossa Lunghe', 'Ossa Corte'],
-            'Muscoli': ['Muscoli Scheletrici', 'Muscoli Lisci']
-        }
-        'Endocrino': {
-            'Ossa': ['Ossa Lunghe', 'Ossa Corte'],
-            'Muscoli': ['Muscoli Scheletrici', 'Muscoli Lisci']
-        }
-        
+        'Sistema Cardiovascolare': ['Cuore', 'Vasi Sanguigni'],
+        'Sistema Locomotore': ['Ossa', 'Muscoli']
     },
     'metacognizione': {
-        'Strategie di Apprendimento': {
-            'Mappe Concettuali': ['Creazione di Mappe', 'Utilizzo di Mappe'],
-            'Lettura Critica': ['Tecniche di Lettura', 'Analisi Critica']
-        },
-        'Consapevolezza': {
-            'Autovalutazione': ['Metodi di Autovalutazione', 'Feedback'],
-            'Pianificazione': ['Obiettivi SMART', 'Gestione del Tempo']
-        }
+        'Strategie di Apprendimento': ['Mappe Concettuali', 'Lettura Critica'],
+        'Consapevolezza': ['Autovalutazione', 'Pianificazione']
     },
     'fisica': {
-        'Meccanica': {
-            'Cinematica': ['Moto Rettilineo', 'Moto Circolare'],
-            'Dinamica': ['Forze', 'Leggi di Newton']
-        },
-        'Elettromagnetismo': {
-            'Elettricità': ['Circuiti', 'Corrente'],
-            'Magnetismo': ['Campi Magnetici', 'Forza di Lorentz']
-        }
+        'Meccanica': ['Cinematica', 'Dinamica'],
+        'Elettromagnetismo': ['Elettricità', 'Magnetismo']
     }
 };
-
 
 // Riferimenti agli elementi select e al pulsante
-var selectMateria = document.getElementById('Materia');
-var selectSezione = document.getElementById('Capitolo');
-var selectSottoSezione = document.getElementById('Sezione');
-var buttonApriSezione = document.getElementById('apriSezione');
+var selectMateria = document.getElementById('materia');
+var selectArgomento = document.getElementById('argomento');
+var selectSottoargomento = document.getElementById('sottoargomento');
+var buttonApriArgomento = document.getElementById('apriArgomento');
 
-// Evento al cambio di Materia
+// Evento al cambio di materia
 selectMateria.onchange = function() {
     // Resetta gli altri menù e disabilita il pulsante
-    selectSezione.innerHTML = '<option value="">-- Seleziona un Sezione --</option>';
-    selectSottoSezione.innerHTML = '<option value="">-- Seleziona un sottoSezione --</option>';
-    buttonApriSezione.disabled = true;
+    selectArgomento.innerHTML = '<option value="">-- Seleziona un argomento --</option>';
+    selectSottoargomento.innerHTML = '<option value="">-- Seleziona un sottoargomento --</option>';
+    buttonApriArgomento.disabled = true;
 
-    var MateriaSelezionata = this.value;
-    if (MateriaSelezionata) {
-        var argomenti = Object.keys(dati[MateriaSelezionata]);
-        argomenti.forEach(function(Sezione) {
+    var materiaSelezionata = this.value;
+    if (materiaSelezionata) {
+        var argomenti = Object.keys(dati[materiaSelezionata]);
+        argomenti.forEach(function(argomento) {
             var option = document.createElement('option');
-            option.value = Sezione;
-            option.text = Sezione;
-            selectSezione.add(option);
+            option.value = argomento;
+            option.text = argomento;
+            selectArgomento.add(option);
         });
     }
 };
 
-// Evento al cambio di Sezione
-selectSezione.onchange = function() {
-    selectSottoSezione.innerHTML = '<option value="">-- Seleziona un sottoSezione --</option>';
-    buttonApriSezione.disabled = true;
+// Evento al cambio di argomento
+selectArgomento.onchange = function() {
+    selectSottoargomento.innerHTML = '<option value="">-- Seleziona un sottoargomento --</option>';
+    buttonApriArgomento.disabled = true;
 
-    var MateriaSelezionata = selectMateria.value;
-    var SezioneSelezionato = this.value;
-    if (SezioneSelezionato) {
-        var sottoargomenti = dati[MateriaSelezionata][SezioneSelezionato];
-        sottoargomenti.forEach(function(sottoSezione) {
+    var materiaSelezionata = selectMateria.value;
+    var argomentoSelezionato = this.value;
+    if (argomentoSelezionato) {
+        var sottoargomenti = dati[materiaSelezionata][argomentoSelezionato];
+        sottoargomenti.forEach(function(sottoargomento) {
             var option = document.createElement('option');
-            option.value = sottoSezione;
-            option.text = sottoSezione;
-            selectSottoSezione.add(option);
+            option.value = sottoargomento;
+            option.text = sottoargomento;
+            selectSottoargomento.add(option);
         });
     }
 };
 
-// Evento al cambio di sottoSezione
-selectSottoSezione.onchange = function() {
+// Evento al cambio di sottoargomento
+selectSottoargomento.onchange = function() {
     if (this.value) {
-        buttonApriSezione.disabled = false;
+        buttonApriArgomento.disabled = false;
     } else {
-        buttonApriSezione.disabled = true;
+        buttonApriArgomento.disabled = true;
     }
 };
 
 // Evento al click del pulsante
-buttonApriSezione.onclick = function() {
-    var MateriaSelezionata = selectMateria.value;
-    var SezioneSelezionato = selectSezione.value;
-    var sottoSezioneSelezionato = selectSottoSezione.value;
+buttonApriArgomento.onclick = function() {
+    var materiaSelezionata = selectMateria.value;
+    var argomentoSelezionato = selectArgomento.value;
+    var sottoargomentoSelezionato = selectSottoargomento.value;
 
     // Costruisci l'URL della pagina
-    var url = encodeURIComponent(MateriaSelezionata) + '/'
-            + encodeURIComponent(SezioneSelezionato) + '/'
-            + encodeURIComponent(sottoSezioneSelezionato) + '.htm';
+    var url = encodeURIComponent(materiaSelezionata) + '/'
+            + encodeURIComponent(argomentoSelezionato) + '/'
+            + encodeURIComponent(sottoargomentoSelezionato) + '.html';
 
     // Naviga all'URL
     window.location.href = url;
