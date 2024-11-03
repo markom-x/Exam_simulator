@@ -56,8 +56,13 @@
 // Dati delle materie, argomenti e sottoargomenti
 var dati = {
     'anatomia': {
-        'Sistema Cardiovascolare': ['Cuore', 'Vasi Sanguigni'],
-        'Sistema Locomotore': ['Ossa', 'Muscoli']
+        'Scheletrico': ['Cuore', 'Vasi Sanguigni'],
+        'Muscolare': ['Ossa', 'Muscoli'], 
+        'Cardiovascolare': ['Ossa', 'Muscoli'], 
+        'Digerente': ['Ossa', 'Muscoli'], 
+        'Respiratorio': ['Ossa', 'Muscoli'], 
+        'Urinario': ['Ossa', 'Muscoli'], 
+        'Genitale': ['Ossa', 'Muscoli'], 
     },
     'metacognizione': {
         'Strategie di Apprendimento': ['Mappe Concettuali', 'Lettura Critica'],
@@ -97,7 +102,7 @@ selectMateria.onchange = function() {
 // Evento al cambio di argomento
 selectArgomento.onchange = function() {
     selectSottoargomento.innerHTML = '<option value="">-- Seleziona un sottoargomento --</option>';
-    buttonApriArgomento.disabled = true;
+    buttonApriArgomento.disabled = false;
 
     var materiaSelezionata = selectMateria.value;
     var argomentoSelezionato = this.value;
