@@ -102,7 +102,7 @@ selectMateria.onchange = function() {
 // Evento al cambio di argomento
 selectArgomento.onchange = function() {
     selectSottoargomento.innerHTML = '<option value="">-- Seleziona un sottoargomento --</option>';
-    buttonApriArgomento.disabled = false;
+    buttonApriArgomento.disabled = true;
 
     var materiaSelezionata = selectMateria.value;
     var argomentoSelezionato = this.value;
