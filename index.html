@@ -30,7 +30,7 @@
 </head>
 <body>
 
-<h1>Seleziona la Materia e l'Argomento</h1>
+<h1>Selezionao</h1>
 
 <label for="materia">Materia:</label>
 <select id="materia">
@@ -40,34 +40,89 @@
     <option value="fisica">Fisica</option>
 </select>
 
-<label for="argomento">Argomento:</label>
-<select id="argomento">
+<label for="capitolo">Capitolo:</label>
+<select id="capitolo">
     <option value="">-- Seleziona un argomento --</option>
 </select>
 
-<label for="sottoargomento">Sottoargomento:</label>
-<select id="sottoargomento">
+<label for="sezione">Sezione:</label>
+<select id="sezione">
     <option value="">-- Seleziona un sottoargomento --</option>
 </select>
 
-<button id="apriArgomento" disabled>Apri Argomento</button>
+<label for="sottosezione">Sottosezione:</label>
+<select id="sottosezione">
+    <option value="">-- Seleziona una sottosezione --</option>
+</select>    
+
+<button id="apriArgomento" disabled>Apri</button>
 
 <script>
 // Dati delle materie, argomenti e sottoargomenti
 var dati = {
     'anatomia': {
-        'Sistema Cardiovascolare': ['Cuore', 'Vasi Sanguigni'],
-        'Sistema Locomotore': ['Ossa', 'Muscoli']
+        'Scheletrico': {
+            'Testa': ['Anatomia del Cuore', 'Fisiologia del Cuore', ''],
+            'Collo': ['Anatomia del Cuore', 'Fisiologia del Cuore', ''],
+            'Tronco': ['Anatomia del Cuore', 'Fisiologia del Cuore', ''],
+            'Arto superiore': ['Anatomia del Cuore', 'Fisiologia del Cuore', ''],
+            'Arto inferiore': ['Anatomia del Cuore', 'Fisiologia del Cuore', '']
+        },
+        'Muscolare': {
+        }
+        'Cardiovascolare': {
+            'Cuore': ['Anatomia del Cuore', 'Fisiologia del Cuore', ''],
+            'Arterie': ['Anatomia del Cuore', 'Fisiologia del Cuore', ''],
+            'Vene': ['Anatomia del Cuore', 'Fisiologia del Cuore', '']
+        }
+        'Digerente': {
+            'Ossa': ['Ossa Lunghe', 'Ossa Corte'],
+            'Muscoli': ['Muscoli Scheletrici', 'Muscoli Lisci']
+        }
+        'Respiratorio': {
+            'Ossa': ['Ossa Lunghe', 'Ossa Corte'],
+            'Muscoli': ['Muscoli Scheletrici', 'Muscoli Lisci']
+        }
+        'Urinario': {
+            'Ossa': ['Ossa Lunghe', 'Ossa Corte'],
+            'Muscoli': ['Muscoli Scheletrici', 'Muscoli Lisci']
+        }
+        'Genitale Maschile': {
+            'Ossa': ['Ossa Lunghe', 'Ossa Corte'],
+            'Muscoli': ['Muscoli Scheletrici', 'Muscoli Lisci']
+        }
+        'Genitale Femminile': {
+            'Ossa': ['Ossa Lunghe', 'Ossa Corte'],
+            'Muscoli': ['Muscoli Scheletrici', 'Muscoli Lisci']
+        }
+        'Endocrino': {
+            'Ossa': ['Ossa Lunghe', 'Ossa Corte'],
+            'Muscoli': ['Muscoli Scheletrici', 'Muscoli Lisci']
+        }
+        
     },
     'metacognizione': {
-        'Strategie di Apprendimento': ['Mappe Concettuali', 'Lettura Critica'],
-        'Consapevolezza': ['Autovalutazione', 'Pianificazione']
+        'Strategie di Apprendimento': {
+            'Mappe Concettuali': ['Creazione di Mappe', 'Utilizzo di Mappe'],
+            'Lettura Critica': ['Tecniche di Lettura', 'Analisi Critica']
+        },
+        'Consapevolezza': {
+            'Autovalutazione': ['Metodi di Autovalutazione', 'Feedback'],
+            'Pianificazione': ['Obiettivi SMART', 'Gestione del Tempo']
+        }
     },
     'fisica': {
-        'Meccanica': ['Cinematica', 'Dinamica'],
-        'Elettromagnetismo': ['Elettricità', 'Magnetismo']
+        'Meccanica': {
+            'Cinematica': ['Moto Rettilineo', 'Moto Circolare'],
+            'Dinamica': ['Forze', 'Leggi di Newton']
+        },
+        'Elettromagnetismo': {
+            'Elettricità': ['Circuiti', 'Corrente'],
+            'Magnetismo': ['Campi Magnetici', 'Forza di Lorentz']
+        }
     }
 };
+
 
 // Riferimenti agli elementi select e al pulsante
 var selectMateria = document.getElementById('materia');
