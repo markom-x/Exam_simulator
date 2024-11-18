@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<hotpot-jquiz-file>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <rdf:Description rdf:about="">
+    <dc:creator>Markom.x</dc:creator>
+  </rdf:Description>
+</rdf:RDF><version>7</version>
+
+<data>
+<title></title>
+
+<timer><seconds>60</seconds><include-timer>0</include-timer></timer>
+
+<reading>
+<include-reading>0</include-reading>
+<reading-title></reading-title>
+<reading-text></reading-text>
+
+</reading>
+
+<questions><question-record><question>Qual &amp;#x00E8; il miglior modo per analizzare il problema dei tre corpi? </question><clue></clue><category></category><weighting>100</weighting><fixed>0</fixed><question-type>4</question-type><answers><answer><text>Metodo numerico</text><feedback></feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Analisi esatta</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Nessuno dei due riesce a risolverlo</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text></text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer></answers><must-select-all>1</must-select-all></question-record><question-record><question>Quali di questi problemi non possono essere risolti n&amp;#x00E8; con metodo numerico n&amp;#x00E8; analitico? </question><clue></clue><category></category><weighting>100</weighting><fixed>0</fixed><question-type>4</question-type><answers><answer><text>Moto dei pianeti</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Moto molecolare di un gas</text><feedback></feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Moto di una molla</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Moto dopo urto</text><feedback></feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer></answers><must-select-all>1</must-select-all></question-record><question-record><question>Quali di questi principi vengono usati per risolvere i due problemi precedenti? </question><clue></clue><category></category><weighting>100</weighting><fixed>0</fixed><question-type>4</question-type><answers><answer><text>Conservazione della quantit&amp;#x00E0; di moto</text><feedback></feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Conservazione della carica</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Conservazione dell&apos;impulso</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Conservazione della quantit&amp;#x00E0; di moto</text><feedback></feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer></answers><must-select-all>1</must-select-all></question-record><question-record><question>Una rotaia con sospensione ad aria pu&amp;#x00F2; fungere da *** come conseguenza del principio di relativit&amp;#x00E0; galileana</question><clue></clue><category></category><weighting>100</weighting><fixed>0</fixed><question-type>2</question-type><answers><answer><text>bilancia</text><feedback></feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text></text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text></text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text></text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer></answers></question-record><question-record><question>Se ho un pezzo di alluminio e di rame della stessa massa:</question><clue></clue><category></category><weighting>100</weighting><fixed>0</fixed><question-type>4</question-type><answers><answer><text>Quello di rame &amp;#x00E8; pi&amp;#x00F9; grosso perch&amp;#x00E8; gli atomi che lo costituiscono sono pi&amp;#x00F9; leggeri e quindi ce n&apos;&amp;#x00E8; bisogno di un numero maggiore. Il rapporto tra il numero di atomi di alluminio e quello di rame &amp;#x00E8; uguale al rapporto tra la massa molare del rame su massa molare dell&apos;alluminio</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Quello di alluminio &amp;#x00E8; pi&amp;#x00F9; grosso perch&amp;#x00E8; gli atomi che lo costituiscono sono pi&amp;#x00F9; leggeri e quindi ce n&apos;&amp;#x00E8; bisogno di un numero maggiore. Il rapporto tra il numero di atomi di alluminio e quello di rame &amp;#x00E8; uguale al rapporto tra la massa molare del rame su massa molare dell&apos;alluminio</text><feedback></feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Quello di alluminio &amp;#x00E8; pi&amp;#x00F9; grosso perch&amp;#x00E8; gli atomi che lo costituiscono sono pi&amp;#x00F9; leggeri e quindi ce n&apos;&amp;#x00E8; bisogno di un numero maggiore. Il rapporto tra il numero di atomi di alluminio e quello di rame &amp;#x00E8; uguale al rapporto tra la massa molare dell&apos;alluminio su massa molare del rame</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text></text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer></answers><must-select-all>1</must-select-all></question-record><question-record><question>Quali delle seguenti affermazioni &amp;#x00E8; corretta? </question><clue></clue><category></category><weighting>100</weighting><fixed>0</fixed><question-type>4</question-type><answers><answer><text>La densit&amp;#x00E0; del rame &amp;#x00E8; maggiore di quella dell&apos;allumino perch&amp;#x00E8; sebbene i Cu siano pi&amp;#x00F9; grossi degli Al il volume di un materiale &amp;#x00E8; principalmente dato da spazi vuoti dovuti ai legami tra gli atomi, quindi il loro numero fa aumentare il volume del corpo di pi&amp;#x00F9; rispetto a quanto non lo faccia il raggio atomico</text><feedback></feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>La densit&amp;#x00E0; dell&apos;alluminio &amp;#x00E8; maggiore di quella del rame perch&amp;#x00E8; sebbene i Cu siano pi&amp;#x00F9; grossi degli Al il volume di un materiale &amp;#x00E8; principalmente dato da spazi vuoti dovuti ai legami tra gli atomi, quindi il loro numero fa aumentare il volume del corpo di meno rispetto a quanto non lo faccia il raggio atomico</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>La densit&amp;#x00E0; dell&apos;alluminio &amp;#x00E8; maggiore di quella del rame perch&amp;#x00E8; sebbene i Cu siano pi&amp;#x00F9; grossi degli Al il volume di un materiale &amp;#x00E8; principalmente dato da spazi vuoti dovuti ai legami tra gli atomi, quindi il loro numero fa aumentare il volume del corpo di pi&amp;#x00F9; rispetto a quanto non lo faccia il raggio atomico</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>La densit&amp;#x00E0; del rame &amp;#x00E8; maggiore di quella dell&apos;allumino perch&amp;#x00E8; sebbene i Cu siano pi&amp;#x00F9; grossi degli Al il volume di un materiale &amp;#x00E8; principalmente dato da spazi vuoti dovuti ai legami tra gli atomi, quindi il loro numero fa aumentare il volume del corpo di meno rispetto a quanto non lo faccia il raggio atomico</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer></answers><must-select-all>1</must-select-all></question-record><question-record><question>Quali delle seguenti conseguenze si possono dedurre da Newton? </question><clue></clue><category></category><weighting>100</weighting><fixed>0</fixed><question-type>4</question-type><answers><answer><text>dq1/dt di una particella &amp;#x00E8; uguale e di segno contrario alla stessa grandezza per la particella 2</text><feedback></feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Le leggi della fisica appaiono le stesse sia che siamo fermi sia che ci muoviamo con velocit&amp;#x00E0; uniforme lungo linea retta</text><feedback>Principio di relativit&amp;#x00E0; galileana</feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>La variazione nel tempo della somma delle quantit&amp;#x00E0; di moto di due particelle per effetto delle mutue forze (interne) &amp;#x00E8; zero</text><feedback></feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Separando due corpi identici attraverso una esplosione i corpi formeranno un insieme simmetrico perch&amp;#x00E8; non c&apos;&amp;#x00E8; motivo che la destra o la sinistra siano preferite</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer></answers><must-select-all>1</must-select-all></question-record><question-record><question>Quali dei seguenti principi derivato da Newton &amp;#x00E8; corretto? </question><clue></clue><category></category><weighting>100</weighting><fixed>0</fixed><question-type>4</question-type><answers><answer><text>Finch&amp;#x00E8; le forze sono interne, qtot delle particelle resta costante perch&amp;#x00E8; un aumento di q1 di una particella (per effetto di un&apos;altra) &amp;#x00E8; esattamente compensato da una diminuzione della q2 della seconda particella per effetto della prima. 
+Applicando forze esterne la loro somma &amp;#x00E8; uguale a dqtot/dt delle particelle del sistema</text><feedback></feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Finch&amp;#x00E8; le forze sono esterne, qtot delle particelle resta costante perch&amp;#x00E8; un aumento di q1 di una particella (per effetto di un&apos;altra) &amp;#x00E8; esattamente compensato da una diminuzione della q2 della seconda particella per effetto della prima. 
+Con forze interne la loro somma &amp;#x00E8; uguale a dqtot/dt delle particelle del sistema</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Finch&amp;#x00E8; le forze sono interne, qtot delle particelle resta costante perch&amp;#x00E8; un aumento di q1 di una particella (per effetto di un&apos;altra) &amp;#x00E8; esattamente compensato da un aumento della q2 della seconda particella per effetto della prima. 
+Applicando forze esterne la loro somma &amp;#x00E8; uguale a dqtot/dt delle particelle del sistema</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>Finch&amp;#x00E8; le forze sono esterne, qtot delle particelle varia perch&amp;#x00E8; un aumento di q1 di una particella (per effetto di un&apos;altra) non &amp;#x00E8; compensato da una diminuzione della q2 della seconda particella per effetto della prima. 
+Con forze interne la loro somma &amp;#x00E8; uguale a dqtot/dt delle particelle del sistema</text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer></answers><must-select-all>1</must-select-all></question-record><question-record><question>Separando con un&apos;esplosione due oggetti notiamo che quando le *** sono uguali, le *** sono uguali</question><clue></clue><category></category><weighting>100</weighting><fixed>0</fixed><question-type>2</question-type><answers><answer><text>velocit&amp;#x00E0;, masse</text><feedback></feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text>masse, velocit&amp;#x00E0;</text><feedback>Si parte dall&apos;analisi di esplosioni tra particelle identiche, quindi con stessa massa enoti che le velocit&amp;#x00E0; sono uguali: questa verit&amp;#x00E0; scoperta viene poi generalizzata</feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text></text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text></text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer></answers></question-record><question-record><question>Usando esplosioni con intensit&amp;#x00E0; maggiore notiamo che se due corpi hanno *** uguali misurate a una certa ***, essi hanno *** quando misurate a un&apos;altra ***</question><clue></clue><category></category><weighting>100</weighting><fixed>0</fixed><question-type>2</question-type><answers><answer><text>masse, velocit&amp;#x00E0;, masse uguali, velocit&amp;#x00E0;</text><feedback></feedback><correct>1</correct><percent-correct>100</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text></text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text></text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text></text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer></answers></question-record><question-record><question></question><clue></clue><category></category><weighting>100</weighting><fixed>0</fixed><question-type>2</question-type><answers><answer><text></text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text></text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text></text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer><answer><text></text><feedback></feedback><correct>0</correct><percent-correct>0</percent-correct><include-in-mc-options>1</include-in-mc-options></answer></answers></question-record></questions>
+</data>
+
+<hotpot-config-file>
+<jquiz>
+<exercise-subtitle>Quiz</exercise-subtitle>
+<instructions></instructions>
+<guess-correct>Correct!</guess-correct>
+<guess-incorrect>Sorry! Try again.</guess-incorrect>
+<partly-incorrect>Your answer is partly wrong: </partly-incorrect>
+<enter-a-guess>Please enter a guess.</enter-a-guess>
+<next-correct-letter>Next correct letter in the answer: </next-correct-letter>
+<correct-answers>Correct answers: </correct-answers>
+<show-answer-caption>Show answer</show-answer-caption>
+<include-hint>1</include-hint>
+<include-show-answer>1</include-show-answer>
+<next-ex-url>nextpage.htm</next-ex-url>
+<send-email>0</send-email>
+<continuous-scoring>1</continuous-scoring>
+<show-correct-first-time>1</show-correct-first-time>
+<shuffle-questions>0</shuffle-questions>
+<shuffle-answers>0</shuffle-answers>
+<show-limited-questions>0</show-limited-questions>
+<questions-to-show>2</questions-to-show>
+<short-answer-tries-on-hybrid-q>2</short-answer-tries-on-hybrid-q>
+<separate-javascript-file>0</separate-javascript-file>
+<case-sensitive>0</case-sensitive>
+<include-keypad>0</include-keypad>
+</jquiz>
+
+<global>
+<your-score-is>PUNTEGGIO</your-score-is>
+<correct-indicator>&amp;#x2714;</correct-indicator>
+<incorrect-indicator>&amp;#x2718;</incorrect-indicator>
+<correct-first-time>Questions answered correctly first time: </correct-first-time>
+<completed-so-far>Questions completed so far: </completed-so-far>
+<exercise-completed>You have completed the exercise.</exercise-completed>
+<keypad-characters></keypad-characters>
+<times-up>Your time is over!</times-up>
+<next-ex-caption>Esercizio successivo</next-ex-caption>
+<back-caption>indietro</back-caption>
+<contents-caption>Indice</contents-caption>
+<include-next-ex>1</include-next-ex>
+<include-contents>1</include-contents>
+<include-back>0</include-back>
+<contents-url>https://markom-x.github.io/Hyena/</contents-url>
+<graphic-url></graphic-url>
+<font-face>Geneva,Arial,sans-serif</font-face>
+<font-size>medium</font-size>
+<page-bg-color>#0080ff</page-bg-color>
+<title-color>#000000</title-color>
+<ex-bg-color>#ffffff</ex-bg-color>
+<text-color>#000000</text-color>
+<link-color>#0000ff</link-color>
+<vlink-color>#0000CC</vlink-color>
+<nav-bar-color>#ff0080</nav-bar-color>
+<formmail-url>http://yourserver.com/cgi-bin/FormMail.pl</formmail-url>
+<email>you@yourserver.com</email>
+<name-please>Please enter your name:</name-please>
+<user-string-1>one</user-string-1>
+<user-string-2>two</user-string-2>
+<user-string-3>three</user-string-3>
+<header-code></header-code>
+<correct-first-time>Questions answered correctly first time: </correct-first-time>
+<check-caption>Consegna</check-caption>
+<ok-caption>OK</ok-caption>
+<next-q-caption>=&amp;#x003E;</next-q-caption>
+<last-q-caption>&amp;#x003C;=</last-q-caption>
+<hint-caption>Suggerimento</hint-caption>
+<show-all-questions-caption>Show all questions</show-all-questions-caption>
+<show-one-by-one-caption>Show questions one by one</show-one-by-one-caption>
+<show-also-correct>1</show-also-correct>
+<process-for-rtl>0</process-for-rtl>
+<include-scorm-12>0</include-scorm-12>
+</global>
+</hotpot-config-file>
+</hotpot-jquiz-file>
